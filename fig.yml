@@ -1,0 +1,10 @@
+web: 
+   build: .
+   ports:  
+   - "8080:8080"
+   links: 
+   - redis
+   command: java -Djava.security.egd=file:/dev/./urandom -jar /sources/app3.jar
+   #command: env
+redis:
+   image: redis
