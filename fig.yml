@@ -6,5 +6,7 @@ web:
    - redis
    command: java -Djava.security.egd=file:/dev/./urandom -jar /sources/app3.jar
    #command: env
+   volumes:
+   - /var/log/system:/var/log/system
 redis:
    image: redis
